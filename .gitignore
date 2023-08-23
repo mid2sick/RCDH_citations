@@ -1,0 +1,7 @@
+oldXlsx/
+oldCsv/
+*_csv/
+*.csv
+*.xlsx
+*.xml
+change_record_url.py
