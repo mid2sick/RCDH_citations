@@ -13,16 +13,15 @@ my_systems.set_done_by_ids(1, 2, ...)
 
 ## 2. find_new_records.py
 - 爬完博碩士論文網後（csv 檔），要跟現有的引用資料（xlsx 檔）比對，留下爬出來的資料裡面的新的部份（得到 add.csv 這個檔案）
+- find_new_records_old.py 跟這個很像，只是引用資料也是 csv 檔，然後是只有針對指定系統去比對
 - 使用方法
 ```bash=
 python3 find_new_records.py
 ```
-至於 find_new_records_old.py 跟這個很像，只是引用資料也是 csv 檔，然後是只有針對指定系統去比對
-
 ## 3. createCitation.py
 - 如果「metadata/title引用」一欄為空，自動生出該欄
+- 沒有依照 APA 、MLA、CHICAGO 等標準引用格式去 format 出這欄
 - 使用方法
 ```bash=
 python3 createCitation.py
 ```
-- 沒有依照 APA 、MLA、CHICAGO 等標準引用格式去 format 出這欄
