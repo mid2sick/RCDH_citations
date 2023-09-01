@@ -1,6 +1,7 @@
 # 引用資料爬蟲程式
 ## 1. crawl_NDLTD.py
 - 爬博碩士論文網的資料，會得到 csv 檔
+- 使用 selenium 爬蟲，記得先下載
 - 使用方法
 ```bash=
 python3 crawl_NDLTD.py
