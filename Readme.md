@@ -10,6 +10,13 @@ python3 crawl_NDLTD.py
 my_systems.set_done_by_names('System name')
 my_systems.set_done_by_ids(1, 2, ...)
 ```
+- 使用前請查看你自己電腦的 chrome 版本還有你自己的 OS 後，到[這裡](https://chromedriver.chromium.org/downloads) 去下載對應的 chromedriver.exe (for windows) 或是 chromedriver (for ubuntu) 到當前的資料夾內。目前資料夾內附有的 geckodriver (for firefox) 和 chromedriver (for chrome) 是 ubuntu 系統用的，你可以忽略。下載完後請確認 functions.py 的 service 一行有沒有選對 executable_pat
+```python=
+# for windows
+service = Service(executable_path="./chromedriver")
+# for ubuntu
+service = Service(executable_path="./chromedriver.exe")
+```
 
 ## 2. find_new_records.py
 - 爬完博碩士論文網後（csv 檔），要跟現有的引用資料（xlsx 檔）比對，留下爬出來的資料裡面的新的部份（得到 add.csv 這個檔案）

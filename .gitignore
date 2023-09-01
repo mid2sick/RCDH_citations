@@ -5,3 +5,7 @@ oldCsv/
 *.xlsx
 *.xml
 change_record_url.py
+chromedriver
+chromedriver.exe
+geckodriver
+geckodriver.exe

@@ -2,6 +2,7 @@ import re
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 from time import sleep
 import csv
 
@@ -73,11 +74,14 @@ def getOneData(driver, page_num, cookie, writer, system):
 
 def crawlOneSystem(system, csvDir, cnt_all):
     cnt = 1
-    driver = webdriver.Firefox(executable_path="./geckodriver")
+    service = Service(executable_path="./chromedriver.exe")
+    options = webdriver.ChromeOptions()
+    driver = webdriver.Chrome(service=service, options=options)
     driver.get('https://ndltd.ncl.edu.tw/')
     sleep(2)
     driver.find_element(By.XPATH, '//a[@title="指令查詢"]').click()
     driver.find_element(By.ID, 'ysearchinput0').send_keys(system.get_req())
+    sleep(2)
     driver.find_element(By.ID, 'gs32search').click()
     num = getDataNum(driver)
 
